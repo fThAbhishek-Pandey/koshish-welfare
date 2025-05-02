@@ -7,7 +7,7 @@ const cloudinaryUploadImage =  async(fileToUpload) => {
       if (!fileToUpload) return null;
       const data = await cloudinary.uploader.upload(fileToUpload.path, {
         folder: 'koshish',           // Creates folder if it doesn't exist
-       resource_type: 'image',               // image | video | raw | auto
+       resource_type: 'auto',               // image | video | raw | auto
       overwrite: true                       // Optional: overwrite if exists
       })
       fs.unlink(fileToUpload.path, (err) => {
