@@ -46,6 +46,14 @@ const MemberSchema = new mongoose.Schema({
     type: Boolean ,
     default:false
   },
+  isCertify:{
+    type: Boolean ,
+    default:true
+  },
+  type:{
+    type:Number,
+    default:1
+  },
   isTop:{
     type: Boolean ,
     default:false
