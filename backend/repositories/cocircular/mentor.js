@@ -6,9 +6,12 @@ const addMentorDB = async(mentorData)=>{
    const newMentor =  await  MemberModel.create(mentorData);
     await newMentor.save()
 }
-
+const CertifyMentorDB = async(id)=>{
+   console.log("certify", id);
+     const {isCertify} =await MemberModel.findById(id)
+      await  MemberModel.findByIdAndUpdate(id, {isCertify:!isCertify})
+}
 const terminateMentorDB = async(id)=>{
-    console.log("terminate", id);
       const {isActive} =await MemberModel.findById(id)
        await  MemberModel.findByIdAndUpdate(id, {isActive:!isActive})
 }
@@ -67,5 +70,6 @@ export {
     updateMentor,
     AllAlumniDB,
     mentorByIdDB,
-    topMentorDB
+    topMentorDB,
+    CertifyMentorDB
 }

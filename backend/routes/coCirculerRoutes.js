@@ -2,7 +2,7 @@ import express from 'express'
 import authCociculer from '../middleware/authentication/cocirculerAuth.js';
 import loginCociculer from '../middleware/authentication/logincocerculer.js';
 import updatecocerculerprofile from '../controller/cocirculer/cocerculer.js';
-import{ addMentor, terminateMentor, AllMentor,getMentorById, updateMentorById,TopMentor} from '../controller/cocirculer/mentor.js';
+import{ addMentor,CertifyMember, terminateMentor, AllMentor,getMentorById, updateMentorById,TopMentor} from '../controller/cocirculer/mentor.js';
 import { addHeader,updateHeader,AllHeader,HeaderChange,HeaderById } from '../controller/cocirculer/manageHeader.js';
 import { Addevent,updateEvent,hideEvent,EventById,topEvent,AllEvents,deleteById } from '../controller/cocirculer/event.js';
 import { addtestimorals,updatetestimorals,Alltestimorals,testimoralsById,TerminateTestimorals } from '../controller/cocirculer/testimorals.js';
@@ -22,6 +22,8 @@ coCirculerRoutes.patch('/mentor/update/:id', authCociculer,upload.single('image'
 coCirculerRoutes.patch('/mentor/terminate/:id', authCociculer,terminateMentor )
 coCirculerRoutes.patch('/mentor/top/:id', authCociculer,TopMentor )
 coCirculerRoutes.get('/mentor/all', authCociculer, AllMentor)
+coCirculerRoutes.get('/member/certificate/:id', authCociculer, AllMentor)
+
 
 // event
 coCirculerRoutes.post('/event/add', authCociculer,upload.single('image'),Addevent)
