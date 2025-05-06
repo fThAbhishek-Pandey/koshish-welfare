@@ -15,6 +15,7 @@ import IndexFamiliy from '../../component/App/family/indexFamiliy';
 import IndexGallery from '../../component/App/gallery/IndexGallery';
 import GalleryById from '../../component/App/gallery/GalleryById';
 import PrivacyAndpolicy from '../../component/privacyAndpolicy';
+import Certifacation from '../../component/Teacher/certifacation';
 const IndexApp = () => {
   return (
     <div className='bg-green-50'>
@@ -35,6 +36,7 @@ const IndexApp = () => {
                 <Route path='/gallery/:id' element={<GalleryById/>} />
                 <Route path='/about' element={<About/>} />
                 <Route path='/contact' element={<Contact/>} />
+                <Route path='/certify/:type/:id' element={<Certifacation/>} />
                 <Route path='/privacy-and-policy' element={<PrivacyAndpolicy/>} />
                 <Route path='*' element={<Error404/>} />
               </Routes>

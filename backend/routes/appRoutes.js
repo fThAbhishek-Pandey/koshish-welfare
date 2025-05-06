@@ -8,9 +8,12 @@ import {getAllMentor,getAllAlumni,getAllFaculty,SearchMembers} from '../controll
 import contactcontroller from '../controller/app/contactcontroller.js';
 import getmyMentor from '../controller/app/getmyMentor.js';
 import {getAllMemories,getAllNews,getGalleryById} from '../controller/app/gallery.js'
+import {getCertificate, DownloadCirtificate} from '../controller/app/getCertificate.js';
 const appRoutes = express.Router();
 appRoutes.get('/header',getHeader );
 appRoutes.get('/top-mentor',getTopmentor )
+appRoutes.get('/member/certify/:type/:id',getCertificate)
+appRoutes.post('/member/certify/download',DownloadCirtificate)
 appRoutes.get('/coordi',getCoordi )
 appRoutes.get('/events',getTopEvents)
 appRoutes.get('/events/new',getNewEvents)
