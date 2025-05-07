@@ -8,7 +8,7 @@ const CertificateCardType1 = ({ certificate }) => {
   const typeArr = ["participant", "mentor"];
   const { _id, name, type, subject, joinTime, leaveTime, yog } =
     certificate;
-  const verificationUrl = `${window.location.origin}/certify/mentor/${_id}`;
+  const verificationUrl = `${window.location.origin}/certify/${type}/${_id}`;
   const formattedJoinDate = new Date(joinTime).toLocaleDateString("en-GB");
   const formattedLeaveDate = new Date(leaveTime).toLocaleDateString("en-GB");
 
