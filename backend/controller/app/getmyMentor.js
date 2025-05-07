@@ -8,8 +8,8 @@ const getmyMentor =async (req,res) => {
         return res.json ({success:false, message: "please fill valid id"})
     }
     const data = await MemberModel.findById(id);
-    const {name,linkedin,image,speciality,yog,isActive,quote,aboutHead,about, classTeacher,subject,leaveTime,joinTime,}=data;
-    const sendData = {name,linkedin,yog,image,isActive,speciality,quote, aboutHead,about, classTeacher,subject,leaveTime,joinTime,}
+    const {name,linkedin,image,speciality,yog,type,isCertify,isActive,quote,aboutHead,about, classTeacher,subject,leaveTime,joinTime,}=data;
+    const sendData = {name,linkedin,yog,image,type,isCertify, isActive,speciality,quote, aboutHead,about, classTeacher,subject,leaveTime,joinTime,}
     console.log("---> ",  data)
     res.json({success:true, data: sendData, message: `Mentor fond id: ${id}`});
 

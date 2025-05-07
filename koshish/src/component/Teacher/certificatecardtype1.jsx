@@ -1,8 +1,8 @@
 import React from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import logoURL from "../../assets/koshishlogo.png";
-import signatureURL from "../../assets/koshishlogo.png";
-import sealURL from "../../assets/koshishlogo.png";
+import signatureURL from "../../assets/signature.svg";
+import sealURL from "../../assets/koshishStamp.jpeg";
 
 const CertificateCardType1 = ({ certificate }) => {
   const typeArr = ["participant", "mentor"];
@@ -105,7 +105,7 @@ const CertificateCardType1 = ({ certificate }) => {
 
           {/* Signature */}
           <div className="text-center">
-            <img src={signatureURL} alt="Signature" className="h-16 mx-auto" />
+            <img src={signatureURL} alt="Signature" className="h-10 mx-auto" />
             <div className="border-t-2 border-gray-600 w-40 mx-auto mt-1"></div>
             <p className="mt-1 font-semibold">Avneesh Yadav</p>
             <p className="text-sm text-gray-500">Coordinator, Koshish</p>

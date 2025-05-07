@@ -40,7 +40,7 @@ const MyMentor = () => {
 
         {/* Mentor Image */}
         <img
-          src={myMentor.image || 'https://via.placeholder.com/150'}
+          src={myMentor.image }
           alt={myMentor.name || 'Mentor Photo'}
           className="w-36 h-36 md:w-48 md:h-48 rounded-full object-cover border-4 border-blue-300 shadow-lg"
         />
@@ -97,11 +97,20 @@ const MyMentor = () => {
           {myMentor.classTeacher !== 'NAN' && (
             <p className="text-gray-800 text-lg"><strong>👨‍🏫 Class Teacher:</strong> {myMentor.classTeacher}</p>
           )}
+          {myMentor.isCertify && (
+            <p className="text-gray-600 text-sm">
+              <a href={`${window.location.origin}/certify/${myMentor.type}/${id}` } target='_blank' >View Certificate </a>
+              
+            </p>
+          )}
           {myMentor.joinTime && (
             <p className="text-gray-600 text-sm">
               Joined on {new Date(myMentor.joinTime).toDateString()}
             </p>
           )}
+          
+          
+          
           {myMentor.linkedin !== 'NAN' && (
             <div className="flex items-center space-x-2 pt-2">
               <span className="text-gray-700 text-lg font-semibold">🔗 Contact: </span>

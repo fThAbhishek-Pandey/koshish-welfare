@@ -112,7 +112,7 @@ const Certification = () => {
               <p><strong>Leave Time:</strong> {cerificate.leaveTime || 'Still Active'}</p>
               <p><strong>Year of Grad:</strong> {cerificate.yog}</p>
               {cerificate.isTop && <p><strong>Top Performer:</strong> Yes</p>}
-              {cerificate.linkedin && (
+              {cerificate.linkedin != 'NAN' && (
                 <p className='col-span-2'>
                   <strong>Contact:</strong>{' '}
                   <a href={cerificate.linkedin} className='text-blue-600 underline' target='_blank' rel='noreferrer'>
