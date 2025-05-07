@@ -16,8 +16,8 @@ const getCertificate =async (req,res) => {
             if(!member){
               return  res.json({success:false, message:"user is not find"});
             }
-            const {_id,type,name, subject,joinTime,leaveTime,speciality,isTop,yog}= member;
-            const sendData = {_id,type,name, subject,joinTime,leaveTime,speciality,isTop,yog}
+            const {_id,type,name, subject,joinTime,isCertify,image,linkedin,classTeacher,leaveTime,speciality,isTop,yog}= member;
+            const sendData = {_id,type,name, subject,joinTime,isCertify,image,linkedin,classTeacher,leaveTime,speciality,isTop,yog}
            return  res.json({success:true, data:sendData});
         }
         else if(type==2){
