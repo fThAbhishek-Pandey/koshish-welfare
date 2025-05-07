@@ -1,69 +1,33 @@
-import { useState, useContext, useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { TeacherContext } from '../../context/TeacherContext'
 import { useParams, Link } from 'react-router-dom'
 import CertificateCardType1 from './certificatecardtype1'
-import puppeteer from 'puppeteer'
+import ReactToPdf from 'react-to-pdf'
 
 const Certification = () => {
   const [showDropdown, setShowDropdown] = useState(false)
   const { cerificate, handelCertificate } = useContext(TeacherContext)
   const { type, id } = useParams()
-  const certificateRef = useRef(null)
+  const certificateRef = useRef()
 
   useEffect(() => {
     handelCertificate(id, type)
   }, [id, type])
-
-  const onHandleDownload = async () => {
-    if (!cerificate || !certificateRef.current) return
-
-    const element = certificateRef.current
-    element.scrollIntoView()
-
-    try {
-      // Launch Puppeteer browser instance
-      const browser = await puppeteer.launch()
-      const page = await browser.newPage()
-
-      // Set the page content based on your certificate component
-      await page.setContent(`
-        <html>
-          <body>
-            <div style="width: 100%; display: flex; justify-content: center;">
-              ${certificateRef.current.innerHTML}
-            </div>
-          </body>
-        </html>
-      `)
-
-      // Generate the PDF from the page content
-      const pdfBuffer = await page.pdf({
-        format: 'A4',
-        printBackground: true,
-        path: `${cerificate.name?.replace(/\s+/g, '_')}_certificate.pdf`,
-      })
-
-      // Save the PDF to the file system or send it directly as response if required
-      await browser.close()
-
-      // If you want to offer a download directly in the browser (for front-end):
-      const blob = new Blob([pdfBuffer], { type: 'application/pdf' })
-      const link = document.createElement('a')
-      link.href = URL.createObjectURL(blob)
-      link.download = `${cerificate.name?.replace(/\s+/g, '_')}_certificate.pdf`
-      link.click()
-
-    } catch (error) {
-      console.error('PDF generation failed:', error)
-    }
-  }
 
   const certificateURL = `${window.location.origin}/certify/${type}/${id}`
   const shareText = `Check out my verified mentor certificate from Koshish Welfare!`
   const encodedText = encodeURIComponent(shareText)
   const encodedURL = encodeURIComponent(certificateURL)
 
-  return cerificate && (
+  if (!cerificate) {
+    return (
+      <div className='text-center mt-40 text-lg font-semibold'>
+        Loading certificate...
+      </div>
+    )
+  }
+
+  return (
     <div className='relative top-32 mb-32 px-4'>
       <h2 className='text-2xl font-semibold text-center mb-6'>Certificate Verification</h2>
 
@@ -76,14 +40,19 @@ const Certification = () => {
             </div>
           </div>
 
-          {/* Buttons: Download + Share */}
+          {/* Download and Share Buttons */}
           <div className='mt-4 flex justify-center gap-4 flex-wrap'>
-            <button
-              className='px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700'
-              onClick={onHandleDownload}
-            >
-              Download
-            </button>
+            {/* <ReactToPdf targetRef={certificateRef} filename={`${cerificate.name?.replace(/\s+/g, '_')}_certificate.pdf`} scale={1.5}>
+              {({ toPdf }) => (
+                <button
+                  className='px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700'
+                  onClick={toPdf}
+                >
+                  Download
+                </button>
+              )}
+            </ReactToPdf> */}
+
             <div className='relative'>
               <button
                 className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700'
