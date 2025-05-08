@@ -86,7 +86,7 @@ const getMentorById = async(req,res)=>{
 const updateMentorById = async( req , res)=>{
       try {
         const {id} = req.params
-         const { name,imgurl ,subject,yog,joinTime,isActive, isVisionary, isTop,classTeacher,speciality,linkedin, about,quote, aboutHead } = req.body;
+         const { name,imgurl ,subject,yog,joinTime,isActive,isCertify, isVisionary, isTop,classTeacher,speciality,linkedin, about,quote, aboutHead } = req.body;
           console.log("updateMentorById",req.body)
          console.log("i am update by Id: ",id)
          const imagefile = req.file
@@ -94,10 +94,10 @@ const updateMentorById = async( req , res)=>{
           console.log("imgurl ",imgurl)
           // await cloudinaryRemoveImage(imgurl);
           const imageData =   await  cloudinaryUploadImage(imagefile)
-          await updateMentor(id, { name,image:  imageData.secure_url ,isActive, isVisionary, isTop,subject,yog,joinTime,classTeacher,speciality,linkedin, about,quote, aboutHead })
+          await updateMentor(id, { name,image:  imageData.secure_url ,isActive,isCertify, isVisionary, isTop,subject,yog,joinTime,classTeacher,speciality,linkedin, about,quote, aboutHead })
        }
        else {
-        await updateMentor(id, { name ,subject,yog,isActive, isVisionary, isTop,joinTime, classTeacher,speciality,linkedin, about,quote, aboutHead })
+        await updateMentor(id, { name ,subject,yog,isActive, isVisionary,isCertify, isTop,joinTime, classTeacher,speciality,linkedin, about,quote, aboutHead })
        }
        
       

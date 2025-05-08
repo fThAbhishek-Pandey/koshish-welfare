@@ -48,7 +48,7 @@ const MemberSchema = new mongoose.Schema({
   },
   isCertify:{
     type: Boolean ,
-    default:true
+    default:false
   },
   type:{
     type:Number,
