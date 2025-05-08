@@ -13,7 +13,7 @@ const CertifyMentorDB = async(id)=>{
 }
 const terminateMentorDB = async(id)=>{
       const {isActive} =await MemberModel.findById(id)
-       await  MemberModel.findByIdAndUpdate(id, {isActive:!isActive})
+       await  MemberModel.findByIdAndUpdate(id, {isActive:!isActive,leaveTime : Date.now() })
 }
 const topMentorDB = async(id)=>{
     const {isTop} = await MemberModel.findById(id)

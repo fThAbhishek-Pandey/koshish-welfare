@@ -1,0 +1,23 @@
+<svg
+    className="w-full h-full"
+    xmlns="http://www.w3.org/2000/svg"
+    preserveAspectRatio="xMidYMid slice"
+  >
+    <defs>
+      <pattern
+        id="koshishPattern"
+        width="160"
+        height="160"
+        patternUnits="userSpaceOnUse"
+      >
+        {/* <!-- Your original SVG content --> */}
+        <rect fill="#ffffff" width="200" height="200" />
+        <polygon
+          fill="#69A2FA"
+          fillOpacity="1"
+          points="100 0 0 100 100 100 100 200 200 100 200 0"
+        />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#koshishPattern)" />
+  </svg>

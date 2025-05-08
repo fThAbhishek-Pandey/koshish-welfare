@@ -1,0 +1,166 @@
+.certificate-container {
+    position: relative;
+    width: 1123px;
+    height: 794px;
+    margin: 0 auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  .certificate-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    opacity: 0.1;
+    pointer-events: none;
+  }
+  
+  .certificate-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .certificate-content {
+    position: relative;
+    z-index: 10;
+    padding: 40px;
+    height: 100%;
+    font-family: sans-serif;
+    color: #1f2937;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .qr-section {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    text-align: center;
+  }
+  
+  .qr-label {
+    margin-top: 8px;
+    font-size: 16px;
+    color: #4b5563;
+  }
+  
+  .logo-section {
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    text-align: right;
+  }
+  
+  .logo {
+    width: 112px;
+  }
+  
+  .logo-text {
+    font-size: 12px;
+    font-weight: 600;
+    color: #374151;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+  
+  .certificate-header {
+    text-align: center;
+    padding: 0 24px;
+    margin-top: 64px;
+  }
+  
+  .certificate-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: #1e3a8a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .certificate-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 4px;
+    text-transform: uppercase;
+  }
+  
+  .certificate-line {
+    margin-top: 32px;
+    font-size: 18px;
+  }
+  
+  .certificate-name {
+    border-bottom: 2px solid #374151;
+    display: inline-block;
+    margin: 12px 0;
+    padding: 0 8px;
+  }
+  
+  .certificate-name h2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .certificate-desc {
+    font-size: 16px;
+    max-width: 750px;
+    margin: 16px auto 0;
+    line-height: 1.6;
+  }
+  
+  .certificate-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 0 8px;
+    margin-top: 24px;
+  }
+  
+  .seal img {
+    height: 96px;
+    margin: 0 auto;
+  }
+  .bladge img {
+    height: 196px;
+    margin: 0 auto;
+  }
+  .seal h2 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 8px;
+    text-align: center;
+  }
+  
+  .signature img {
+    height: 40px;
+    margin: 0 auto;
+  }
+  
+  .signature-line {
+    border-top: 2px solid #374151;
+    width: 160px;
+    margin: 8px auto 4px;
+  }
+  
+  .signature-name {
+    font-weight: 600;
+  }
+  
+  .signature-role {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .certificate-issue-date {
+    text-align: right;
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 16px;
+    padding-right: 8px;
+  }
+  
