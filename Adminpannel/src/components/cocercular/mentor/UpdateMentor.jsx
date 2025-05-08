@@ -23,10 +23,11 @@ const UpdateMentor = () => {
       const [ about, setAbout] = useState('');
       const [image , setImage] = useState(false)
       const [isTop, setIsTop] = useState(false);
+      const [isCertify, setCertify] = useState(false);
       const [isActve, setIsActive] = useState(false);
       const [isVisionary, setIsVisionary] = useState(false);
       const [linkedin, setlinkedin] = useState('');
-      
+      isCertify
       
       useEffect(()=>{
         setName(MentorById.name);
@@ -44,6 +45,7 @@ const UpdateMentor = () => {
         setIsActive(MentorById.isActive);
         setIsVisionary(MentorById.isVisionary);
         setlinkedin(MentorById.linkedin);
+        setCertify(MentorById.isCertify)
 
       }, [id])
       
@@ -64,6 +66,7 @@ const UpdateMentor = () => {
       formData.append('aboutHead',aboutHead)
       formData.append('about',about)
       formData.append('isTop',isTop)
+      formData.append('isCertify',isCertify)
       formData.append('isActive',isActve)
       formData.append('isVisionary',isVisionary)
       formData.append('image',image);
@@ -178,6 +181,14 @@ const UpdateMentor = () => {
               onChange={(e) => setIsVisionary(e.target.checked)}
             />
             <span>Visionary</span>
+          </label>
+          <label className="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              checked={isCertify}
+              onChange={(e) => setCertify(e.target.checked)}
+            />
+            <span>Certified</span>
           </label>
         </div>
       <div>
