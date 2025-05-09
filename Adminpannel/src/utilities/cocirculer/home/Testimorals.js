@@ -2,7 +2,7 @@ import axios from "axios"
 import { toast } from "react-toastify"
 const AddTestimorals =async (backendURL, formdata, cirToken) => {
   try {
-    const {data}= await axios.post(backendURL+'/api/cocirculer/addtestimorals',formdata, {headers:{authcociculertoken :cirToken}})
+    const {data}= await axios.post(backendURL+'/api/cocirculer/testimorals/add',formdata, {headers:{authcociculertoken :cirToken}})
     if(data.success){
         toast.success(data.message);
     }
@@ -71,7 +71,7 @@ const hideTestimoralById = async (backendURL, id, cirToken) => {
   try {
       console.log("backendURL", backendURL, cirToken)
      
-      const {data} = await axios.patch(backendURL+`/api/cocirculer/testimorals/hide/${id}`,{}, {headers:{authCociculertoken:cirToken}} )
+      const {data} = await axios.patch(backendURL+`/api/cocirculer/testimorals/change/${id}`,{}, {headers:{authCociculertoken:cirToken}} )
      if (data.success) {
           toast.success(data.message);
      }

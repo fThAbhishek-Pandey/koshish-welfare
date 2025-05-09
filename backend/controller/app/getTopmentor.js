@@ -2,7 +2,7 @@
 import MemberModel from "../../models/member/MemberSchema.js";
 const getTopmentor = async(req,res) => {
   try {
-       const data = await MemberModel.find({isTop:true, isActive:true});
+       const data = await MemberModel.find({isTop:true, isActive:true, isVisionary:false});
        const sendData = data.slice(-4).map((item)=>{
         const {_id, name,linkedin,image,speciality,quote,joinTime,} = item;
      return  {_id, name,linkedin,image,speciality,quote,joinTime};
