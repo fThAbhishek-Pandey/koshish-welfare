@@ -4,7 +4,7 @@ const addMentor = async(req, res ) => {
    try {
           const {name,email,subject,isActive, isVisionary, isTop,classTeacher,linkedin,speciality,quote, aboutHead, about}= req.body;
           if(!name|| !email|| !subject || !linkedin|| !classTeacher|| !speciality|| !about || !quote || !aboutHead){
-            console.log(name,email,subject,isActive, isVisionary, isTop,classTeacher,speciality,linkedin, about)
+            // console.log(name,email,subject,isActive, isVisionary, isTop,classTeacher,speciality,linkedin, about)
             res.json({success:false, message:"fill all details"})
           }
           const mentorImg = req.file
@@ -20,7 +20,7 @@ const addMentor = async(req, res ) => {
         await  addMentorDB({...mentorData,image: imageData.secure_url })
          res.json({success:true,message: "New teacher is added"}) 
    } catch (error) {
-            console.log(error)
+            // console.log(error)
             res.json({success:true, message: error.message})
    }
 }
@@ -87,12 +87,12 @@ const updateMentorById = async( req , res)=>{
       try {
         const {id} = req.params
          const { name,imgurl ,subject,yog,joinTime,isActive,isCertify, isVisionary, isTop,classTeacher,speciality,linkedin, about,quote, aboutHead } = req.body;
-          console.log("updateMentorById",req.body)
-         console.log("i am update by Id: ",id)
+          // console.log("updateMentorById",req.body)
+        //  console.log("i am update by Id: ",id)
          const imagefile = req.file
          if(imagefile){
-          console.log("imgurl ",imgurl)
-          // await cloudinaryRemoveImage(imgurl);
+          // console.log("imgurl ",imgurl)
+          await cloudinaryRemoveImage(imgurl);
           const imageData =   await  cloudinaryUploadImage(imagefile)
           await updateMentor(id, { name,image:  imageData.secure_url ,isActive,isCertify, isVisionary, isTop,subject,yog,joinTime,classTeacher,speciality,linkedin, about,quote, aboutHead })
        }
@@ -104,7 +104,7 @@ const updateMentorById = async( req , res)=>{
       res.json({success:true, message : "successfully updated"})
 
       } catch (error) {
-        console.log(error)
+        // console.log(error)
         res.json({success:true, message: error.message})
       }
 }

@@ -3,7 +3,7 @@ import MemberModel from "../../models/member/MemberSchema.js";
 const getCertificate =async (req,res) => {
     try {
         const {type,id} = req.params
-        console.log("certificate", type,id)
+        // console.log("certificate", type,id)
         if(type== undefined){
             return res.json({success:false, message:"Please define role"})
         }
@@ -12,7 +12,7 @@ const getCertificate =async (req,res) => {
         }
         if(type ==1 ){
             const member = await MemberModel.findOne({ _id: id });
-            console.log(member);
+            // console.log(member);
             if(!member){
               return  res.json({success:false, message:"user is not find"});
             }

@@ -1,7 +1,7 @@
 import { ContactModel } from "../../models/contact.js";
 const contactcontroller = async(req, res) => {
     try {
-        console.log(req.body)
+        // console.log(req.body)
         const {name,
             email,
             loca,

@@ -23,7 +23,7 @@ const storage = multer.diskStorage({
                 cb(null, false);
             }
         } catch (error) {
-            console.log("filename multer : ", error);
+            // console.log("filename multer : ", error);
         }
      
     }

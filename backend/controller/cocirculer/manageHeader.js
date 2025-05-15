@@ -6,26 +6,26 @@ const addHeader = async(req,res) => {
     const {heading, para}= req.body
     const imagefile = req.file
     if (!heading|| !para) {
-      console.log("heading and para is not defined")
+      // console.log("heading and para is not defined")
       return res.json({success:false,message:"heading and para is not defined" })
     }
     if (!imagefile){
 
       return res.json({success:false,message:"please upload header image" })
     }
-    else console.log("img-->",imagefile)
+    // else console.log("img-->",imagefile)
    const image = await cloudinaryUploadImage(imagefile)
    if (!image || !image.secure_url) {
-    console.log("image --.",image)
+    // console.log("image --.",image)
     throw new Error("Image upload failed");
 }
-   console.log("image -->",image)
+  //  console.log("image -->",image)
    const newHeader = await headerModel.create({image:image.secure_url, heading, para })
    await newHeader.save()
 
     res.json({success:true, message:"Top mentor is added"});
   } catch (error) {
-    console.error(error)
+    // console.error(error)
     res.send({success:false, message: error.message});
   }
 }
@@ -35,7 +35,7 @@ const updateHeader = async(req,res) => {
     const {id} = req.params
     const imagefile = req.file
     if (!heading|| !para) {
-      console.log("heading and para is not defined")
+      // console.log("heading and para is not defined")
       return res.json({success:false,message:"heading and para is not defined" })
     }
     if (imagefile){
@@ -48,7 +48,7 @@ const updateHeader = async(req,res) => {
     await headerModel.findByIdAndUpdate(id,{ heading, para })
      return   res.json({success:true, message:"Top mentor is added"});
   } catch (error) {
-    console.error(error)
+    // console.error(error)
     res.send({success:false, message: error.message});
   }
 }
@@ -69,7 +69,7 @@ const HeaderById = async(req,res) => {
    const data = await headerModel.findById(id)
    return  res.json({success:true, data, message:`header is ${id}`});
   } catch (error) {
-    console.error(error)
+    // console.error(error)
     res.send({success:false, message: error.message});
   }
 }
@@ -81,7 +81,7 @@ const HeaderChange = async(req,res) => {
    
    return  res.json({success:true, message:"Header is Change succesfully"});
   } catch (error) {
-    console.error(error)
+    // console.error(error)
     res.send({success:false, message: error.message});
   }
 }

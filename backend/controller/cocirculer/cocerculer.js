@@ -10,12 +10,12 @@ const updatecocerculerprofile = async(req,res) => {
         address,
       } = req.body;
     //   const imagefile = req.file;
-      console.log(
-        speciality,
-        about,
-        address,
-        // imagefile
-      );
+      // console.log(
+      //   speciality,
+      //   about,
+      //   address,
+      //   // imagefile
+      // );
       // checking for all data for docotor
       if (
         !email ||

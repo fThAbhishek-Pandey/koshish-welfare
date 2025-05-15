@@ -6,7 +6,7 @@ const getcontact = async (req,res) => {
         res.json({ success: true, message: "get All contact", data});
 
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         res.json({success: false, message:  error.message})
     }
 }

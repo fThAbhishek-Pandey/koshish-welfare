@@ -5,7 +5,7 @@ const addtestimorals = async(req,res) => {
       const {name ,headline,quote, linkedin}=req.body
       const imagefile = req.file
       if(!name ||!headline ||!quote ||!linkedin){
-         console.log("req: ",headline,quote, linkedin);
+         // console.log("req: ",headline,quote, linkedin);
          res.json({success: false,message:"fill all the fields"});
       }
       if(!imagefile){
@@ -18,7 +18,7 @@ const addtestimorals = async(req,res) => {
        return res.json({success:true, message:"new Testimoral is added successfully"})
 
     } catch (error) {
-             console.log(error)
+            //  console.log(error)
              res.json({success:true, message: error.message})
     }
 }
@@ -28,7 +28,7 @@ const updatetestimorals = async(req,res) => {
      const {id} = req.params
      const imagefile = req.file
      if(!name ||!headline ||!quote ||!linkedin){
-        console.log("req: ",headline,quote, linkedin);
+      //   console.log("req: ",headline,quote, linkedin);
         res.json({success: false,message:"fill all the fields"});
      }
      if(imagefile){
@@ -43,7 +43,7 @@ const updatetestimorals = async(req,res) => {
     return res.json({success:true, message:"Testimoral updated successfully"})
 
    } catch (error) {
-            console.log(error)
+            // console.log(error)
             res.json({success:true, message: error.message})
    }
 }
@@ -53,7 +53,7 @@ const Alltestimorals = async(req,res) => {
       return res.json({success:true,data, message:"Testimonial found successfully"})
 
    } catch (error) {
-            console.log(error)
+            // console.log(error)
             res.json({success:true, message: error.message})
    }
 }
@@ -65,7 +65,7 @@ const testimoralsById = async(req,res) => {
       return res.json({success:true,data, message:`Testimonial found successfully ${data.name}`})
 
    } catch (error) {
-            console.log(error)
+            // console.log(error)
             res.json({success:true, message: error.message})
    }
 }
@@ -77,7 +77,7 @@ const TerminateTestimorals = async(req,res) => {
       return res.json({success:true, message:"Testimoral Activate change successfully"})
 
    } catch (error) {
-            console.log(error)
+            // console.log(error)
             res.json({success:true, message: error.message})
    }
 }

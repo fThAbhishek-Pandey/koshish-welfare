@@ -22,7 +22,7 @@ const getNewsByIdDB = async(id)=>{
    return data;
 }
 const getNewsAllDB = async()=>{
-    console.log("I am get all News DB ")
+    // console.log("I am get all News DB ")
     const data =  await Announcement.find({})
     console.log(data)
     return data;

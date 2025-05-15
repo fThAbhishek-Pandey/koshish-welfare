@@ -7,7 +7,7 @@ const addMentorDB = async(mentorData)=>{
     await newMentor.save()
 }
 const CertifyMentorDB = async(id)=>{
-   console.log("certify", id);
+   // console.log("certify", id);
      const {isCertify} =await MemberModel.findById(id)
       await  MemberModel.findByIdAndUpdate(id, {isCertify:!isCertify})
 }
@@ -26,7 +26,7 @@ const AllMentorDB = async ()=>{
       console.log(data);
       return data.reverse()
    } catch (error) {
-      console.log("AllMentorDB :", error)
+      // console.log("AllMentorDB :", error)
    }
    
    
@@ -50,13 +50,13 @@ const updateMentor = async (id, data)=>{
       await  MemberModel.findByIdAndUpdate(id, data)
       .then(updatedUser => {
          if (updatedUser) {
-           console.log('User updated successfully:', updatedUser);
+         //   console.log('User updated successfully:', updatedUser);
          } else {
-           console.log('User not found');
+         //   console.log('User not found');
          }
        })
        .catch(error => {
-         console.error('Error updating user:', error);
+         // console.error('Error updating user:', error);
        });
    } catch (error) {
       console.log(error);

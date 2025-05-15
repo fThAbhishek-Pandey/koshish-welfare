@@ -9,7 +9,7 @@ const getTopmentor = async(req,res) => {
   });
        res.json({success:true, message:"finding Topmentor succesffuly", data:sendData })
   } catch (error) {
-     console.log(error)
+   //   console.log(error)
      res.json({success:false, message:error.message})
   }
 }
@@ -23,7 +23,7 @@ const getCoordi = async(req,res) => {
   
        return  res.json({success:true, message:"finding co-ordinator succesffuly", data:sendData })
    } catch (error) {
-      console.log(error)
+      // console.log(error)
       res.json({success:false, message:error.message})
    }
  }

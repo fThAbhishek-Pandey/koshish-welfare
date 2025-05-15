@@ -12,15 +12,15 @@ const cloudinaryUploadImage =  async(fileToUpload) => {
       })
       fs.unlink(fileToUpload.path, (err) => {
         if (err) {
-            console.error("Error deleting temp file:", err);
+            // console.error("Error deleting temp file:", err);
         } else {
-            console.log("Temporary image deleted:", fileToUpload.path);
+            // console.log("Temporary image deleted:", fileToUpload.path);
         }
     });
-      console.log("data : ",data);
+      // console.log("data : ",data);
       return data;
     } catch (error) {
-      console.log(error);
+      // console.log(error);
       throw new Error("Internal Server Error (cloudinary)",error);
     }
   };
@@ -28,7 +28,7 @@ const cloudinaryUploadImage =  async(fileToUpload) => {
   // Cloudinary Remove Image
 const cloudinaryRemoveImage = async (imagePublicId) => {
     try {
-      console.log("")
+      // console.log("")
       const result = await cloudinary.uploader.destroy(imagePublicId);
       return result;
     } catch (error) {

@@ -7,10 +7,10 @@ const getnewAnnouncement = async(req, res) => {
            const {_id, isAtive,heading, image,date} = item;
         return  {_id, isAtive,heading, image,date};
     });
-       console.log("new data: ",sendData);
+    //    console.log("new data: ",sendData);
       return res.json({success: true, message: "find new data", data: sendData.reverse()})
     } catch (error) {
-        console.log(error);
+        // console.log(error);
         return res.json({success: false, message: error.message})
     }
 }

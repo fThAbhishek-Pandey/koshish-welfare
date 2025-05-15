@@ -12,12 +12,12 @@ const loginCoordinater = async (req,res)=>{
            res.json({success:true,cocirculertoken:`${token}`, message:"You are login"});
      }
 else {
-        console.log("Invalid cridencial")
+        // console.log("Invalid cridencial")
        res.json({success:false,message:"Invalid cridencial" })
 }
        
     } catch (error) {
-       console.log(error)
+    //    console.log(error)
        res.json({success:false, msg:`admin login ${error.message}`})
     }
 }

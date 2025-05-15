@@ -7,16 +7,16 @@ const changecocirculer = async (req, res) => {
   try {
     const { name, email, password, speciality, about, address } = req.body;
     const imgfile = req.file;
-    console.log("imagefile", imgfile);
-    console.log(
-      "all request resourse",
-      name,
-      email,
-      password,
-      speciality,
-      about,
-      address
-    );
+    // console.log("imagefile", imgfile);
+    // console.log(
+    //   "all request resourse",
+    //   name,
+    //   email,
+    //   password,
+    //   speciality,
+    //   about,
+    //   address
+    // );
     // checking for all data for docotor
     if (!name || !email || !password || !speciality || !about || !address)
       return res.json({ success: false, message: `fill all required field` });
@@ -38,12 +38,12 @@ const changecocirculer = async (req, res) => {
     //  hasing doctor password
     const salt = await bycrypt.genSalt(10);
     const hashPassword = await bycrypt.hash(password, salt);
-    console.log("hashpassword", hashPassword);
+    // console.log("hashpassword", hashPassword);
     //  upload image to cloudnary
     const imageUpload = cloudinaryUploadImage(imgfile)
       .then(() => console.log("file is upload on cloud"));
     //  save in our database
-    console.log("i am uploaded img : ",imageUpload)
+    // console.log("i am uploaded img : ",imageUpload)
     const cocircularData = {
       name,
       email,
@@ -54,7 +54,7 @@ const changecocirculer = async (req, res) => {
       address: address,
       date: Date.now(),
     };
-    console.log(cocircularData);
+    // console.log(cocircularData);
 
     if(imageUpload){
     // const newCocirculer = new CocicularModel(cocircularData);
