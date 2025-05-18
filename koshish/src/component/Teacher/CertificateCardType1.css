@@ -60,6 +60,15 @@
     right: 40px;
     text-align: right;
   }
+  .logo-section p{
+    position: absolute;
+    top: 24px;
+    right: 40px;
+    text-align: center;
+    font-size: 16px;
+    color: #4b5563;
+    max-width: fit-content;
+  }
   
   .logo {
     width: 112px;
