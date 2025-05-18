@@ -26,13 +26,18 @@ const CertificateCardType1 = ({ certificate }) => {
           <QRCodeCanvas value={verificationUrl} size={200} />
           <p className="qr-label">Scan to verify</p>
         </div>
-
+        <div className="contributor">
+          <div className="logo-section">
+          <img src={logoURL} alt="Koshish Logo" className="logo" />
+          <p className="logo-text">Rajkiya Enginering College Ambedkar Nagar</p>
+        </div>
         <div className="logo-section">
           <img src={recabn} alt="Rajkiya Enginering college" className="logo" />
-          <p className="logo-text">Koshish Welfare.</p>
-          <img src={logoURL} alt="Koshish Logo" className="logo" />
-          <p className="logo-text">Koshish Welfare.</p>
+          <p className="logo-text">Koshish Welfare</p>
+          
         </div>
+        </div>
+        
 
         <div className="certificate-header">
           <h1 className="certificate-title">Certificate</h1>

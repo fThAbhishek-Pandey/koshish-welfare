@@ -60,7 +60,7 @@ const MyMentor = () => {
           <h2 className="text-2xl md:text-4xl font-bold text-blue10">
             {myMentor.name || 'Unnamed Mentor'}
           </h2>
-          {myMentor.yog !== 'NAN' && (
+          {myMentor.yog !== -1 && (
             <p className="text-blue-500 text-lg mt-1">
               {myMentor.yog - 4} - {myMentor.yog-2000}
             </p>

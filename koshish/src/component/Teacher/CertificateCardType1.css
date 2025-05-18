@@ -48,11 +48,15 @@
     font-size: 16px;
     color: #4b5563;
   }
-  
+  .contributor{
+    display: flex;
+    font-size: 16px;
+    color: #4b5563;
+    margin-top: 8px;
+  }
   .logo-section {
     position: absolute;
     top: 24px;
-    display: flex;
     right: 40px;
     text-align: right;
   }
