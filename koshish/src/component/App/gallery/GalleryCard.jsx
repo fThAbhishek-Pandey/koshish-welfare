@@ -1,5 +1,5 @@
 import LightGallery from 'lightgallery/react';
-
+import { Helmet } from 'react-helmet-async';
 // import styles
 import 'lightgallery/css/lightgallery.css';
 import 'lightgallery/css/lg-zoom.css';
@@ -25,6 +25,11 @@ const GalleryCard = ({ gallery }) => {
 
   return (
     <div className="px-4 py-8">
+      <Helmet>
+        <title>Gallery</title>
+        <meta name='description' content='Explore the beautiful moments captured by Koshish.' />
+        
+      </Helmet>
       <div className="flex flex-wrap justify-center gap-6">
         <LightGallery
           onInit={onInit}

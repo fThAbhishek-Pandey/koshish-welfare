@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 import React, { useContext, useEffect } from 'react';
+import  {Helmet} from 'react-helmet-async';                
 import { AppContext } from '../../../context/App';
 import GalleryCard from './GalleryCard';
 
@@ -36,6 +37,14 @@ const GalleryById = () => {
 
   return galleryById && (
     <div className="relative top-20 md:top-32 mb-28 px-4 w-full max-w-6xl mx-auto space-y-8">
+      <Helmet>
+        <title>{galleryTitle}</title>
+        <meta name="description" content={galleryDescription} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name='keywords' content=''/>
+
+      </Helmet>
+      
       <div className="text-left">
         <h1 className="text-4xl font-extrabold text-blue10 mb-2">{galleryTitle}</h1>
         <p className="text-sm text-gray-500">{new Date(date).toLocaleDateString()}</p>

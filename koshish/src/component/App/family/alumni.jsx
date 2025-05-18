@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../../context/App";
+import { Helmet } from "react-helmet-async";
 import MentorCard from "./MentorCard";
 import ServerErr from "../../SeverErr";
 import NoData from "../../NoData";
@@ -42,6 +43,15 @@ const IndexAlumni = () => {
 
   return (
     <div className="md:mb-32 py-6 sm:px-6 lg:px-8 mb-24 text-center">
+      <Helmet>
+        <title>Meet Our Alumni - Koshish</title>
+        <meta name="description" content="Discover the inspiring journeys of our Koshish alumni." />
+        <meta name="keywords" content="Koshish, Alumni, Success Stories" />
+        <meta name="author" content="Koshish Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+        
+      </Helmet>
       <div className="w-full px-4 py-12">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue10 mb-6">

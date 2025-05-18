@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 const EventCard = ({ event }) => {
   const navigate = useNavigate();
   const [timeLeft, setTimeLeft] = useState("");
@@ -43,6 +43,14 @@ const EventCard = ({ event }) => {
   return (
     <div className="bg-green-100 rounded-2xl shadow-md hover:shadow-xl transition duration-300 p-4 max-w-sm w-full sm:w-[90%] md:w-[22rem]">
       {/* Thumbnail */}
+      <Helmet>
+        <title>{event.name} - Koshish</title>
+        <meta name="description" content={`Learn more about ${event.name}, an event at Koshish.`} />
+        <meta name="keywords" content={`Koshish, Events, ${event.name}`} />
+        <meta name="author" content="Koshish Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <img
         onClick={() => navigate(`/events/${event._id}`)}
         src={event.thumbnail}

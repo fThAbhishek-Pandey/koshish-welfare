@@ -1,8 +1,16 @@
 import React from "react";
-
+import { Helmet } from "react-helmet-async";
 const History = () => {
   return (
     <div className="bg-white p-6 rounded-xl mb-4 shadow-md max-w-5xl mx-auto border-l-4 border-green-500">
+    <Helmet>
+      <title>History - Koshish</title>
+      <meta name="description" content="Learn about the history of Koshish and its initiatives." />
+      <meta name="keywords" content="Koshish, History, Education, Social Initiative" />
+      <meta name="author" content="Koshish Team" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="robots" content="index, follow" />
+    </Helmet>
     <h2 className="text-3xl font-bold text-gray-800 mb-4">History</h2>
     <p className="text-gray-700 text-lg leading-relaxed mb-4">
       When a try is given wholeheartedly, it accomplishes the ultimate goal, and then a revolution is on the verge of being started. Such kind of initiative was a venture started by our seniors to educate the children belonging to the underprivileged society, giving them elementary knowledge. 

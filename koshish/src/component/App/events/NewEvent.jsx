@@ -1,5 +1,6 @@
 import React from "react";
 import NoEvent from "./NoEvent";
+import { Helmet } from "react-helmet-async";
 import { useEffect, useContext } from "react";
 import { AppContext } from "../../../context/App";
 import ServerErr from "../../SeverErr";
@@ -13,6 +14,14 @@ const NewEvent = () => {
   console.log("newEvent: ", newEvent);
   return (
     <div className="relative  px-4 sm:px-6 lg:px-8 py-8">
+      <Helmet>
+        <title>See Recent Events - Koshish</title>
+        <meta name="description" content="Stay updated with our recent events at Koshish." />
+        <meta name="keywords" content="Koshish, Events, Recent Events" />
+        <meta name="author" content="Koshish Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue10 mb-6">
             See Recent Events

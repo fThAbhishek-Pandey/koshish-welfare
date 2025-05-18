@@ -1,8 +1,17 @@
 import React from "react";
-
+import { Helmet } from "react-helmet-async";
 const Wedo = () => {
   return (
     <div className="bg-gray-50 p-6 sm:p-10 rounded-xl shadow-lg max-w-5xl mx-auto border-l-4 border-green-500 ">
+  <Helmet>
+    <title>What Do We Do? - Koshish</title>
+    <meta name="description" content="Learn about the various activities and initiatives undertaken by Koshish to support education and personal development." />
+    <meta name="keywords" content="Koshish, Education, Social Initiative, Activities" />
+    <meta name="author" content="Koshish Team" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+  </Helmet>
+
   {/* Section Title */}
   <h2 className="text-3xl font-bold text-gray-800 mb-6 text-center">WHAT DO WE DO?</h2>
 

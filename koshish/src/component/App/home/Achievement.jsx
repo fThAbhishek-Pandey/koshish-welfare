@@ -1,9 +1,19 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import AchivIll from '../../../assets/faci.svg';
 
 const Achievement = () => {
   return (
     <div className="px-6 py-16 max-w-7xl mx-auto">
+      <Helmet>
+        <title>Our Work</title>
+        <meta name="description" content="Discover the impact of KOSHISH through our dedicated facilities and resources." />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.koshishwelfare.in/" />
+        <meta name="keywords" content="Koshish, Our Work, Facilities, Education, Empowerment" />
+        <meta property="og:title" content="Our Work" />
+        <meta property="og:description" content="Discover the impact of KOSHISH through our dedicated facilities and resources." />
+      </Helmet>
       <h2 className="text-4xl font-bold text-blue10 text-center mb-4">Our Work</h2>
       <p className="max-w-4xl mx-auto text-center text-gray-700 text-lg mb-10">
         With the dedication of our team, KOSHISH has built a nurturing environment where students can gain knowledge, sharpen their skills, and confidently showcase their talents.

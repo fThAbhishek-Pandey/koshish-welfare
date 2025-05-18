@@ -1,4 +1,5 @@
 import React, { useState,useContext,useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 import PastAnouncement from './PastAnouncement'
 import NewAnouncement from './newAnouncement'
 import { AppContext } from '../../../context/App'
@@ -10,6 +11,14 @@ const Anouncement = () => {
     },[docuTitle])
   return (
     <div className='relative top-20 md:top-32 mb-20 md:mb-32'> 
+       <Helmet>
+          <title>News - Koshish</title>
+          <meta name="description" content="Stay updated with the latest news and announcements from Koshish." />
+          <meta name="keywords" content="Koshish, News, Announcements, Updates" />
+          <meta name="author" content="Koshish Team" />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta name="robots" content="index, follow" />
+       </Helmet>
          <div className="flex space-x-4 border-b border-gray-500">
         <div
           onClick={() => setTab(0)}

@@ -1,5 +1,6 @@
 import React, { useState,useContext,useEffect } from "react"
 import Memories from "./memories"
+import { Helmet } from "react-helmet-async"
 import Newspaper from "./newpaper"
 import { AppContext } from "../../../context/App"
 const IndexGallery = () => {
@@ -10,6 +11,14 @@ const IndexGallery = () => {
       },[docuTitle])
   return (
     <div className="relative top-32 mb-32">
+      <Helmet>
+        <title>Gallery - Koshish</title>
+        <meta name="description" content="Explore the beautiful moments captured by Koshish." />
+        <meta name="keywords" content="Koshish, Gallery, Memories, NewsPaper" />
+        <meta name="author" content="Koshish Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
        <div className="flex space-x-4 border-b border-gray-300">
         <div
           onClick={() => setTab(0)}

@@ -4,6 +4,7 @@ import logoURL from "../../assets/koshishlogo.png";
 import signatureURL from "../../assets/signature.svg";
 import sealURL from "../../assets/koshishStamp.jpeg";
 import certibg from "../../assets/certibg.svg";
+import recabn from "../../assets/recabn.png";
 import bladge from '../../assets/certificateblage.svg'
 import "./CertificateCardType1.css"; // Import the CSS
 
@@ -27,6 +28,8 @@ const CertificateCardType1 = ({ certificate }) => {
         </div>
 
         <div className="logo-section">
+          <img src={recabn} alt="Rajkiya Enginering college" className="logo" />
+          <p className="logo-text">Koshish Welfare.</p>
           <img src={logoURL} alt="Koshish Logo" className="logo" />
           <p className="logo-text">Koshish Welfare.</p>
         </div>
@@ -39,7 +42,7 @@ const CertificateCardType1 = ({ certificate }) => {
             <h2>{name}</h2>
           </div>
           <p className="certificate-desc">
-            has successfully served as a <strong>{typeArr[type]} in {subject}</strong> from{" "}
+            has successfully served as a <strong>{typeArr[type]}</strong> from{" "}
             <strong>{formattedJoinDate}</strong> to <strong>{formattedLeaveDate}</strong> with{" "}
             <strong>Koshish Welfare</strong>, contributing meaningfully to our mission of empowering students through education.
           </p>

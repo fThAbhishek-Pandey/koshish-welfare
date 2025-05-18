@@ -1,5 +1,6 @@
 import React, {useState, useEffect,useContext} from 'react'
 import { AppContext } from '../../../context/App'
+ import { Helmet } from 'react-helmet-async';
 const Top = () => {
   const {docuTitle, setDocuTitle,} = useContext(AppContext)
         useEffect(()=>{
@@ -40,6 +41,15 @@ const Top = () => {
 
   return (
     <div className='w-full h-full  pb-10 sm:pb-16 md:pb-16 lg:pb-20 sm:px-1 lg:px-2 relative top-24 mb-16 md:mb-10'>
+    <Helmet>
+            <title>Koshish</title>
+            <meta name="description" content="Let's Dream" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="canonical" href="https://www.koshishwelfare.in/" />
+            <meta name="keywords" content="Koshish, Welfare, Education, Empowerment" />
+            <meta property="og:title" content="Koshish" />
+          </Helmet>
+    
     <div className='px-1 py-4 md:py-10 lg:py-10'>
     <h1 className='text-green-500 text-center text-3xl font-semibold md:text-4xl lg:text-5xl'>
       Welcome to <span className='text-3xl font-extrabold text-blue10 underline md:text-5xl lg:text-6xl'>KOSHISH</span>

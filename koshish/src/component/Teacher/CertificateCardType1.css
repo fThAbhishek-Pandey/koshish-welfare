@@ -52,6 +52,7 @@
   .logo-section {
     position: absolute;
     top: 24px;
+    display: flex;
     right: 40px;
     text-align: right;
   }

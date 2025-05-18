@@ -1,10 +1,19 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
 const MentorCard = ({ item }) => {
   const navigate = useNavigate();
   return (
     <div className="group cursor-pointer bg-green-100 border-2 border-green-300 shadow-lg rounded-3xl p-6 sm:p-8 text-center w-full max-w-xs transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 hover:scale-105">
+     <Helmet>
+        <title>{item.name} - Koshish</title>
+        <meta name="description" content={`Learn more about ${item.name}, a mentor at Koshish.`} />
+        <meta name="keywords" content={`Koshish, Mentors, ${item.name}`} />
+        <meta name="author" content="Koshish Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+     </Helmet>
       <div className="flex justify-center">
         <img
           src={item.image}
@@ -17,7 +26,7 @@ const MentorCard = ({ item }) => {
         {item.name !="NAN" &&<h2 className="text-lg sm:text-xl font-semibold text-blue10 mb-1">
           {item.name}
         
-            {item.yog && <span className="text-sm ml-2 text-gray-800">{item.yog-4}-{item.yog-2000}</span>}
+            {item.yog && item.yog !=-1 && <span className="text-sm ml-2 text-gray-800">{item.yog-4}-{item.yog-2000}</span>}
           
         </h2>}
         {item.speciality != "NAN" &&  <p className="text-sm sm:text-lg text-green-700 font-semibold mb-2">

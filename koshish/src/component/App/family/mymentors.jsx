@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useParams } from 'react-router-dom';
 import { AppContext } from '../../../context/App';
 import { FaLinkedin } from "react-icons/fa";
@@ -31,6 +32,15 @@ const MyMentor = () => {
 
   return (
     <div className="min-h-screen bg-green-50 flex items-center justify-center pt-24 px-4 pb-32">
+        <Helmet>
+          <title>{myMentor.name} - Koshish</title>
+          <meta name='description' content={`Learn more about ${myMentor.name}, a mentor at Koshish.`} />
+          <meta name='keywords' content={`Koshish, Mentors, ${myMentor.name}`} />
+          <meta name='author' content='Koshish Team' />
+          <meta name='viewport' content='width=device-width, initial-scale=1' />
+          <meta name='robots' content='index, follow' />
+        </Helmet>
+
       <div className="max-w-4xl w-full bg-green-100 shadow-2xl rounded-2xl p-8 md:p-12 flex flex-col items-center text-center space-y-8">
 
         {/* Heading */}

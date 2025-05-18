@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { AppContext } from '../../../context/App';
 import AlbumCard from './AlbumCard';
 const Memories = () => {
@@ -12,6 +13,14 @@ const Memories = () => {
 
   return (
     <div className="p-6">
+      <Helmet>
+        <title> Koshish Memories</title>
+        <meta name='description' content='A collection of cherished memories from Koshish.' />
+        <meta name='keywords' content='Koshish, Memories, Gallery' />
+        <meta name='author' content='Koshish Team' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='robots' content='index, follow' />
+      </Helmet>
      <div className="w-full px-4 py-12">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue10 mb-6">

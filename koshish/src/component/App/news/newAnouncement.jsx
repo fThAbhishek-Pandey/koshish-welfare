@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-
+import { Helmet } from 'react-helmet-async';
 import NoAnouncement from './NoAnouncement'
 import { AppContext } from '../../../context/App';
 import NewsCard from './NewsCard';
@@ -12,6 +12,14 @@ const NewAnnouncement = () => {
 
   return (
     <div className="container mx-auto p-4">
+      <Helmet>
+        <title>New Announcements - Koshish</title>
+        <meta name='description' content='Stay updated with the latest news and announcements from Koshish.' />
+        <meta name='keywords' content='Koshish, News, Announcements, Updates' />
+        <meta name='author' content='Koshish Team' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='robots' content='index, follow' />
+      </Helmet>
       <div className="w-full px-4 py-12">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue10 mb-6">
