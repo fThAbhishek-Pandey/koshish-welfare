@@ -1,8 +1,16 @@
 import React from "react";
-
+import { Helmet } from "react-helmet-async";
 const Intro = () => {
   return (
     <div className="bg-gray-50 p-6 rounded-xl shadow-md max-w-5xl mb-36 mx-auto border-l-4 border-blue-500 relative top-20 md:top-32">
+  <Helmet>
+    <title>About Us - Koshish</title>
+    <meta name="description" content="Learn more about Koshish, a social initiative focused on education for all." />
+    <meta name="keywords" content="Koshish, About Us, Education, Social Initiative" />
+    <meta name="author" content="Koshish Team" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="index, follow" />
+  </Helmet>
   <h2 className="text-3xl font-bold text-gray-800 mb-4">ABOUT US</h2>
   <p className="text-gray-700 text-lg leading-relaxed mb-4">
     True to its Hindi literal meaning, 

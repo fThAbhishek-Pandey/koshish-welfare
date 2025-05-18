@@ -1,9 +1,18 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import CultureImg from "../../../assets/cultue.png";
 const Culture = () => {
   return (<div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 p-4 md:p-10">
   {/* Text Content */}
   <div className="w-full md:w-3/5">
+    <Helmet>
+      <title>KOSHISH Mantra</title>
+      <meta name="description" content="At KOSHISH, we inspire students to dream big and dedicate all our efforts to helping them reach the heights they aspire to — with the belief that 'simple efforts can fill colours in many lives.'" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="canonical" href="https://www.koshishwelfare.in/" />
+      <meta name="keywords" content="Koshish, Mantra, Inspiration, Education, Empowerment" />
+      <meta property="og:title" content="KOSHISH Mantra" />
+    </Helmet>
     <h2 className="text-3xl sm:text-4xl font-bold text-blue10 mb-4">The Koshish Mantra</h2>
     <div className="text-base sm:text-lg leading-relaxed text-gray-800 space-y-4">
       <p>

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaLinkedin } from "react-icons/fa6";
 import {
   FaChalkboardTeacher,
@@ -25,6 +26,28 @@ const About = () => {
 
   return (
     <div className="pb-4 sm:pb-16 md:pb-6 lg:pb-8 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>About Us</title>
+        <meta name="description" content="Dive into the spirit of Koshish, where every effort counts. Merging
+            compassion with commitment, Koshish builds a foundation of hope
+            through education, mentorship, and sustained support. Together, we
+            nurture brighter tomorrows."/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.koshishwelfare.in/about" />
+        <meta name="keywords" content="Koshish, Welfare, Education, Empowerment" />
+        <meta property="og:title" content="About Us" />
+        <meta property="og:description" content="Dive into the spirit of Koshish, where every effort counts. Merging
+            compassion with commitment, Koshish builds a foundation of hope" />
+        <meta property="og:image" content={Aboutimg} />
+        <meta property="og:url" content="https://www.koshishwelfare.in/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Koshish" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="en_GB" />
+        <meta property="og:locale:alternate" content="fr_FR" />
+        <meta property="og:locale:alternate" content="es_ES" />
+        <meta property="og:locale:alternate" content="de_DE" />
+      </Helmet>
       <h1 className="text-3xl sm:text-4xl my-4 md:text-5xl font-bold text-blue10 pt-16 text-center">
       Our Guiding Lights
       </h1>

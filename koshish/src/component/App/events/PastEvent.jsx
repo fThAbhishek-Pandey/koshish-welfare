@@ -1,4 +1,5 @@
 import React,{ useEffect,useContext } from 'react'
+import { Helmet } from 'react-helmet-async'
 import NoEvent from './NoEvent'
 import ServerErr from '../../SeverErr'
 import { AppContext } from '../../../context/App'
@@ -13,6 +14,14 @@ const PastEvent = () => {
     console.log("pastEvent: ",pastEvent)
   return (
     <div className="sm:px-6 lg:px-8 py-8">
+      <Helmet>
+        <title>Our Past Events - Koshish</title>
+        <meta name="description" content="Explore the past events organized by Koshish." />
+        <meta name="keywords" content="Koshish, Past Events, Workshops, Competitions" />
+        <meta name="author" content="Koshish Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
      <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue10 mb-6">
             Our Past Events

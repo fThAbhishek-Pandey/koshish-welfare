@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
 const NewsCard = ({announcement}) => {
     const navigate = useNavigate();
@@ -8,6 +9,14 @@ const NewsCard = ({announcement}) => {
               key={announcement._id} 
               className="bg-green-100 rounded-xl shadow-lg overflow-hidden border border-gray-200 transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2"
             >
+              <Helmet>
+                <title>{announcement.heading} - Koshish</title>
+                <meta name='description' content={announcement.description} />
+                <meta name='keywords' content={announcement.keywords} />
+                <meta name='author' content={announcement.author} />
+                <meta name='viewport' content='width=device-width, initial-scale=1' />
+                <meta name='robots' content='index, follow' />
+              </Helmet>
               <img
                 className="w-full h-52 object-cover cursor-pointer"
                 onClick={() => navigate(`/news/${announcement._id}`)}

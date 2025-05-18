@@ -1,4 +1,5 @@
 import React, { useState,useContext,useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import IndexMentor from "./Mentor";
 import IndexAlumni from "./alumni";
 import Faculty from "./Visionary";
@@ -39,6 +40,15 @@ const IndexFamiliy = () => {
 
       {/* Search Member Separate Button */}
       <div className="flex justify-start mt-4">
+        <Helmet>
+          <title>
+              family
+          </title>
+          <meta name="description" content="Explore the various facets of the Koshish family." />
+          <meta name="keywords" content="Koshish, Family, Community" />
+          <meta name="author" content="Koshish Team" />
+           
+        </Helmet>
         {tab !== 0 && (
           <button
             onClick={() => setTab(0)}

@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 import { AppContext } from "../../../context/App";
 import Loader from "../../Loader";
 import ServerErr from "../../SeverErr";
@@ -20,6 +21,17 @@ const Event = () => {
 
   return (
     <div className=" pb-16 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>Events</title>
+        <meta
+          name="description"
+          content="KOSHISH is an organization dedicated to empowering children through cultural and technical events. They foster creativity, innovation, and talent, providing a platform for young minds to showcase their skills and potential."
+       />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.koshishwelfare.in/events" />
+        <meta property="og:title" content="Events" />
+        <meta keyword="Koshish, Events, Empowering Children, Cultural Events, Technical Events" />
+          </Helmet>
       <div className=" max-w-8xl mx-auto">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-blue10 pt-16 text-center">
           Events

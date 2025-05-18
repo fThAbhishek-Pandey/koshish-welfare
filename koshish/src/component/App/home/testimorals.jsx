@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { AppContext } from "../../../context/App";
 import { FaLinkedin } from "react-icons/fa6";
 import Loader from "../../Loader";
@@ -18,6 +19,13 @@ const Testimonials = () => {
 
   return (
     <div className="pb-16 px-4">
+      <Helmet>
+            <title>Testimonials</title>
+            <meta name="description" content="These testimonials highlight how KOSHISH has played a transformative role in fostering personal growth, empowering education, and uplifting communities through meaningful support and opportunities." />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="canonical" href="https://www.koshishwelfare.in/" />
+            <meta name="keywords" content="Koshish, Testimonials, Empowerment, Education, Community Support" />
+          </Helmet>
       <h2 className="text-4xl sm:text-5xl font-bold text-blue10 text-center pt-16 pb-4">
         Testimonials
       </h2>

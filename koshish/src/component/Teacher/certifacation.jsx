@@ -4,7 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import CertificateCardType1 from './certificatecardtype1'
 import html2canvas from 'html2canvas'
 import jsPDF from 'jspdf'
-
+import { Helmet } from 'react-helmet-async'
 const Certification = () => {
   const [showDropdown, setShowDropdown] = useState(false)
   const { cerificate, handelCertificate } = useContext(TeacherContext)
@@ -49,6 +49,14 @@ const Certification = () => {
 
   return (
     <div className='relative top-32 mb-36 px-4'>
+      <Helmet>
+        <title>{cerificate.name} - Koshish</title>
+        <meta name='description' content={`Certificate of ${cerificate.name}`} />
+        <meta name='keywords' content={`Koshish, Certificate, ${cerificate.name}`} />
+        <meta name='author' content='Koshish Team' />
+        <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <meta name='robots' content='index, follow' />
+      </Helmet>
       <h2 className='text-2xl md:text-4xl text-blue10 font-semibold text-center mb-6'>Verified by Koshish Welfare</h2>
       <p className='text-lg md:text-xl text-center mb-6 w-max-5xl'>
       This certificate has been digitally verified and issued by the Koshish Welfare to acknowledge the authentic contributions and verified mentorship of the individual.</p>

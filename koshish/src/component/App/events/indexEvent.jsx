@@ -1,4 +1,5 @@
 import React, { useState,useEffect,useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import NewEvent from "./NewEvent";
 import PastEvent from "./PastEvent";
 import { AppContext } from "../../../context/App";
@@ -10,6 +11,10 @@ const IndexEvent = () => {
     },[docuTitle])
   return (
     <div className="relative bg-green-50 top-20 md:top-32 mb-32">
+      <Helmet>
+        <title>Events</title>
+        <meta name="description" />
+      </Helmet>
       <div className="flex space-x-4 border-b border-gray-500">
         <div
           onClick={() => setTab(0)}

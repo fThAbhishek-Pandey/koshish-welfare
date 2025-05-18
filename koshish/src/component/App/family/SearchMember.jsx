@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { AppContext } from "../../../context/App";
 import MentorCard from "./MentorCard";
 const SearchMember = () => {
@@ -19,6 +20,14 @@ const SearchMember = () => {
 
   return (
     <div className="py-6 sm:px-6 lg:px-8 mb-24">
+      <Helmet>
+        <title>Search Member - Koshish</title>
+        <meta name="description" content="Search for a member in the Koshish community." />
+        <meta name="keywords" content="Koshish, Search, Member" />
+        <meta name="author" content="Koshish Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="w-full px-4 py-12">
         <div className="max-w-5xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue10 mb-6">

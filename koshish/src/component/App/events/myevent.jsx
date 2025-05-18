@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
 import { AppContext } from "../../../context/App";
 import Markdown from "react-markdown";
@@ -25,6 +26,14 @@ const Myevent = () => {
 
   return (
     <div className="flex flex-col items-center px-4 py-10 bg-gradient-to-b from-green-50 to-green-100 min-h-screen relative top-16 md:to-32">
+      <Helmet>
+        <title>{idEvent.name} - Koshish</title>
+        <meta name="description" content={`Learn more about ${idEvent.name}, an event at Koshish.`} />
+        <meta name="keywords" content={`Koshish, Events, ${idEvent.name}`} />
+        <meta name="author" content="Koshish Team" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="robots" content="index, follow" />
+      </Helmet>
       <div className="w-full max-w-5xl bg-green-100 rounded-2xl shadow-xl overflow-hidden border border-gray-200">
         {/* Banner */}
         <div className="relative">

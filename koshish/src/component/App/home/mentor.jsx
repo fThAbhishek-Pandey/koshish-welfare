@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { AppContext } from '../../../context/App';
 import Loader from '../../Loader';
 import ServerErr from '../../SeverErr';
@@ -22,6 +23,11 @@ const Mentor = () => {
 
   return (
     <div className="pb-20 sm:pb-16 md:pb-16 lg:pb-20 px-4 sm:px-6 lg:px-8">
+      <Helmet>
+        <title>Mentors</title>
+        <meta name="description" content="Meet our dedicated mentors who are committed to empowering students and fostering a culture of learning and growth." />
+        <meta name='keywords' content='' />
+      </Helmet>
       <div className="max-w-7xl mx-auto">
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-blue10 pt-16 text-center">
           Our Mentors
