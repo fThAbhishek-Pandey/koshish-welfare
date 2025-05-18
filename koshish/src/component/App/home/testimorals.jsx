@@ -20,7 +20,7 @@ const Testimonials = () => {
   return (
     <div className="pb-16 px-4">
       <Helmet>
-            <title>Testimonials</title>
+            <title>Koshish Welfare</title>
             <meta name="description" content="These testimonials highlight how KOSHISH has played a transformative role in fostering personal growth, empowering education, and uplifting communities through meaningful support and opportunities." />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <link rel="canonical" href="https://www.koshishwelfare.in/" />

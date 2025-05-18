@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div className="pb-4 sm:pb-16 md:pb-6 lg:pb-8 px-4 sm:px-6 lg:px-8">
       <Helmet>
-        <title>About Us</title>
+        <title>Koshish</title>
         <meta name="description" content="Dive into the spirit of Koshish, where every effort counts. Merging
             compassion with commitment, Koshish builds a foundation of hope
             through education, mentorship, and sustained support. Together, we

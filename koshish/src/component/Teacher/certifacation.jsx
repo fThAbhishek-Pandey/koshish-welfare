@@ -50,7 +50,7 @@ const Certification = () => {
   return (
     <div className='relative top-32 mb-36 px-4'>
       <Helmet>
-        <title>{cerificate.name} - Koshish</title>
+        <title>{`${cerificate.name} - Koshish`}</title>
         <meta name='description' content={`Certificate of ${cerificate.name}`} />
         <meta name='keywords' content={`Koshish, Certificate, ${cerificate.name}`} />
         <meta name='author' content='Koshish Team' />

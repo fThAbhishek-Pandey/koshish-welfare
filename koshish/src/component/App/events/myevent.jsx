@@ -27,10 +27,10 @@ const Myevent = () => {
   return (
     <div className="flex flex-col items-center px-4 py-10 bg-gradient-to-b from-green-50 to-green-100 min-h-screen relative top-16 md:to-32">
       <Helmet>
-        <title>{idEvent.name} - Koshish</title>
-        <meta name="description" content={`Learn more about ${idEvent.name}, an event at Koshish.`} />
-        <meta name="keywords" content={`Koshish, Events, ${idEvent.name}`} />
-        <meta name="author" content="Koshish Team" />
+        <title>{`${idEvent.name} - Koshish Welfare`}</title>
+        <meta name="description" content={`Learn more about ${idEvent.name}, an event at Koshish Welfare.`} />
+        <meta name="keywords" content={`Koshish Welfare, Events, ${idEvent.name}`} />
+        <meta name="author" content="Koshish Welfare Team" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="robots" content="index, follow" />
       </Helmet>
