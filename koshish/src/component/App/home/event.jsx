@@ -22,7 +22,7 @@ const Event = () => {
   return (
     <div className=" pb-16 px-4 sm:px-6 lg:px-8">
       <Helmet>
-        <title>Events</title>
+        <title>Koshish welfare</title>
         <meta
           name="description"
           content="KOSHISH is an organization dedicated to empowering children through cultural and technical events. They foster creativity, innovation, and talent, providing a platform for young minds to showcase their skills and potential."

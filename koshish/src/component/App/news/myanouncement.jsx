@@ -19,7 +19,7 @@ const Myanouncement = () => {
   return myAnnouncement && (
     <div className="max-w-6xl relative top-20 md:top-32 mb-20 md:mb-32 mx-auto p-6 bg-green-100 shadow-lg rounded-xl border border-gray-200">
       <Helmet>
-        <title>{myAnnouncement.heading} - Koshish</title>
+        <title>{`${myAnnouncement.heading} - Koshish`}</title>
         <meta name='description' content={myAnnouncement.description} />
         <meta name='keywords' content={myAnnouncement.keywords} />
         <meta name='author' content={myAnnouncement.author} />

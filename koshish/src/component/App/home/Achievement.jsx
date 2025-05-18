@@ -6,7 +6,7 @@ const Achievement = () => {
   return (
     <div className="px-6 py-16 max-w-7xl mx-auto">
       <Helmet>
-        <title>Our Work</title>
+        <title>Koshish</title>
         <meta name="description" content="Discover the impact of KOSHISH through our dedicated facilities and resources." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://www.koshishwelfare.in/" />

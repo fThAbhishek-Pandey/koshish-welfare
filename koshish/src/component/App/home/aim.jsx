@@ -6,7 +6,7 @@ const Culture = () => {
   {/* Text Content */}
   <div className="w-full md:w-3/5">
     <Helmet>
-      <title>KOSHISH Mantra</title>
+      <title>Kosish welfare</title>
       <meta name="description" content="At KOSHISH, we inspire students to dream big and dedicate all our efforts to helping them reach the heights they aspire to — with the belief that 'simple efforts can fill colours in many lives.'" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="canonical" href="https://www.koshishwelfare.in/" />

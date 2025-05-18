@@ -46,7 +46,7 @@ const IndexHeader = () => {
   return (
     <div className="w-full px-2 sm:px-4 md:px-10 lg:px-16 xl:px-24">
       <Helmet>
-        <title>Koshish</title>
+        <title>Koshish welfare</title>
         <meta name="description" content="Let's Dream" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="canonical" href="https://www.koshishwelfare.in/" />

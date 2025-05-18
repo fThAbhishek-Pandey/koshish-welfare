@@ -42,7 +42,7 @@ const Top = () => {
   return (
     <div className='w-full h-full  pb-10 sm:pb-16 md:pb-16 lg:pb-20 sm:px-1 lg:px-2 relative top-24 mb-16 md:mb-10'>
     <Helmet>
-            <title>Koshish</title>
+            <title>Koshish Welfare</title>
             <meta name="description" content="Let's Dream" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <link rel="canonical" href="https://www.koshishwelfare.in/" />
