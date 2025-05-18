@@ -30,10 +30,10 @@ const MyMentor = () => {
     );
   }
 
-  return (
+  return myMentor &&  (
     <div className="min-h-screen bg-green-50 flex items-center justify-center pt-24 px-4 pb-32">
         <Helmet>
-          <title>{myMentor.name} - Koshish</title>
+          <title>{`${myMentor.name} - Koshish`}</title>
           <meta name='description' content={`Learn more about ${myMentor.name}, a mentor at Koshish.`} />
           <meta name='keywords' content={`Koshish, Mentors, ${myMentor.name}`} />
           <meta name='author' content='Koshish Team' />
@@ -45,7 +45,7 @@ const MyMentor = () => {
 
         {/* Heading */}
         <h1 className="text-3xl md:text-5xl font-extrabold text-blue10">
-          About the Mentor
+          About the Member
         </h1>
 
         {/* Mentor Image */}
