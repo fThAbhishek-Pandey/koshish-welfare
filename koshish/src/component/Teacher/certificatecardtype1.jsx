@@ -1,24 +1,29 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { QRCodeCanvas } from "qrcode.react";
 import logoURL from "../../assets/koshishlogo.png";
 import signatureURL from "../../assets/signature.svg";
 import sealURL from "../../assets/koshishStamp.jpeg";
 import certibg from "../../assets/certibg.svg";
 import recabn from "../../assets/recabn.png";
-import bladge from '../../assets/certificateblage.svg'
-import "./CertificateCardType1.css"; // Import the CSS
+import bladge from "../../assets/certificateblage.svg";
+import "./CertificateCardType1.css";
 
 const CertificateCardType1 = ({ certificate }) => {
   const typeArr = ["participant", "mentor"];
   const { _id, name, type, subject, joinTime, leaveTime, yog } = certificate;
+
   const verificationUrl = `${window.location.origin}/certify/${type}/${_id}`;
   const formattedJoinDate = new Date(joinTime).toLocaleDateString("en-GB");
   const formattedLeaveDate = new Date(leaveTime).toLocaleDateString("en-GB");
 
+  const issueDate = useMemo(() => {
+    return new Date().toLocaleDateString("en-GB");
+  }, []);
+
   return (
     <div className="certificate-container">
       <div className="certificate-bg">
-        <img src={certibg} alt="certificate background" />
+        <img src={logoURL} alt="certificate background" />
       </div>
 
       <div className="certificate-content">
@@ -26,18 +31,19 @@ const CertificateCardType1 = ({ certificate }) => {
           <QRCodeCanvas value={verificationUrl} size={200} />
           <p className="qr-label">Scan to verify</p>
         </div>
+
         <div className="contributor">
           <div className="logo-section">
-          <img src={logoURL} alt="Koshish Logo" className="logo" />
-          <p className="logo-text">Rajkiya Enginering College Ambedkar Nagar</p>
+            <img src={recabn} alt="Koshish Logo" className="logo" />
+            <p className="logo-text">
+              Rajkiya Engineering College Ambedkar Nagar
+            </p>
+          </div>
+          <div className="logo-section">
+            <img src={logoURL} alt="College Logo" className="logo" />
+            <p className="logo-text">Koshish Welfare</p>
+          </div>
         </div>
-        <div className="logo-section">
-          <img src={recabn} alt="Rajkiya Enginering college" className="logo" />
-          <p className="logo-text">Koshish Welfare</p>
-          
-        </div>
-        </div>
-        
 
         <div className="certificate-header">
           <h1 className="certificate-title">Certificate</h1>
@@ -48,11 +54,14 @@ const CertificateCardType1 = ({ certificate }) => {
           </div>
           <p className="certificate-desc">
             has successfully served as a <strong>{typeArr[type]}</strong> from{" "}
-            <strong>{formattedJoinDate}</strong> to <strong>{formattedLeaveDate}</strong> with{" "}
-            <strong>Koshish Welfare</strong>, contributing meaningfully to our mission of empowering students through education.
+            <strong>{formattedJoinDate}</strong> to{" "}
+            <strong>{formattedLeaveDate}</strong> with{" "}
+            <strong>Koshish Welfare</strong>, contributing meaningfully to our
+            mission of empowering students through education.
           </p>
           <p className="certificate-desc">
-            We wish them success in all their future endeavors. (Year of Graduation: <strong>{yog}</strong>)
+            We wish them success in all their future endeavors. (Year of
+            Graduation: <strong>{yog}</strong>)
           </p>
         </div>
 
@@ -62,7 +71,7 @@ const CertificateCardType1 = ({ certificate }) => {
             <h2>Koshish Welfare</h2>
           </div>
           <div className="bladge">
-            <img src={bladge} alt="bladge" />
+            <img src={bladge} alt="Certificate Badge" />
           </div>
           <div className="signature">
             <img src={signatureURL} alt="Signature" />
@@ -72,9 +81,7 @@ const CertificateCardType1 = ({ certificate }) => {
           </div>
         </div>
 
-        <div className="certificate-issue-date">
-          Date Issued: {new Date().toLocaleDateString("en-GB")}
-        </div>
+        <div className="certificate-issue-date">Date Issued: {issueDate}</div>
       </div>
     </div>
   );
