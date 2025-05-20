@@ -10,7 +10,7 @@ const AlbumCard = ({item}) => {
     onClick={() => navigate(`/gallery/${item._id}`)}
   >
     <Helmet>
-      <title>{item.galleryTitle}</title>
+      <title>Koshish-Gallery</title>
       <meta name="description" content={item.description} />
       <meta name="keywords" content={item.keywords} />
       <link rel="canonical" href={`https://www.koshishwelfare.in/gallery/${item._id}`} />

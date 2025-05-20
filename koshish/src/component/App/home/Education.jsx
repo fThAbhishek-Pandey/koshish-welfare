@@ -33,7 +33,7 @@ const Education = () => {
         <link rel="canonical" href="https://www.koshishwelfare.in/" />
         <meta name="keywords" content="Koshish, Education, Empowerment, Knowledge, Society" />
       </Helmet>
-      <div className="w-full md:w-1/2 flex justify-center">
+      <div className="w-full md:w-1/2 hidden md:block  justify-center">
         <img
           src={education}
           alt="Education Illustration"
