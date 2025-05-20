@@ -32,7 +32,7 @@ const Culture = () => {
   </div>
 
   {/* Image */}
-  <div className="w-full md:w-2/5">
+  <div className="w-full hidden md:block md:w-2/5">
     <img
       src={CultureImg}
       alt="KOSHISH Culture"

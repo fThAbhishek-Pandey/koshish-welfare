@@ -10,7 +10,7 @@ const NewsCard = ({announcement}) => {
               className="bg-green-100 rounded-xl shadow-lg overflow-hidden border border-gray-200 transition-transform duration-300 hover:shadow-2xl hover:-translate-y-2"
             >
               <Helmet>
-                <title>{announcement.heading} - Koshish</title>
+                <title>News - Koshish</title>
                 <meta name='description' content={announcement.description} />
                 <meta name='keywords' content={announcement.keywords} />
                 <meta name='author' content={announcement.author} />

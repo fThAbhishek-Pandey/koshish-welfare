@@ -26,7 +26,7 @@ const Footer = () => {
         <div className="flex flex-col items-center md:items-start">
           <img src={Logo} alt="Logo" className="w-20 h-20 rounded-full" />
           <h1 className="text-3xl font-bold mt-2">Koshish</h1>
-          <h3 className="text-lg mt-2">A Welfare And Educational Socity</h3>
+          <h3 className="text-lg mt-2">A Welfare And Educational Society</h3>
         </div>
         <div className="mt-4">
           <p className="text-lg text-center md:text-left">Follow us on:</p>
@@ -65,11 +65,18 @@ const Footer = () => {
         <div className="w-full md:w-[40%] text-center md:text-left mb-6 md:mb-0">
           <h2 className="text-2xl font-bold">Contact Us</h2>
           <p className="text-md mt-2">
-            <span>Mon-Sat: 5:00pm to 6:00pm</span><br/>
-            <span>Mob No.: +91 8467865427, +91 9519774060 </span><br/>
-            <span href="mailto:koshish.edu@gmail.com">Email: koshish.edu@gmail.com</span>
+             <a
+              href="tel:+918467865427"
+              
+            >
+              Mob: +91 84678 65427
+            </a><br/>
+            <span href="mailto:team@koshishwelfare.in">Email: team@koshishwelfare.in</span>
           </p>
           <h2 className="text-2xl font-bold mt-4">Our Location</h2>
+          <h2>
+              <span className="font-bold">Address:</span> Akbarpur – Tanda Road, Akbarpur, Ravepur Vhaudden Pur, Uttar Pradesh 224122
+            </h2>
           {
             <MapContainer center={position} zoom={13} className="w-full h-48">
               <TileLayer

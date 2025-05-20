@@ -63,14 +63,14 @@ const Certification = () => {
       {cerificate.isCertify ? (
         <>
           {/* Certificate Display */}
-          <div className="flex w-[96%] justify-center">
+          <div className=" w-[96%] hidden md:flex justify-center">
             <div ref={certificateRef}>
               <CertificateCardType1 certificate={cerificate} />
             </div>
           </div>
 
           {/* Download and Share Buttons */}
-          <div className='mt-4 flex justify-center gap-4 flex-wrap'>
+          <div className='mt-4 hidden md:flex justify-center gap-4 flex-wrap'>
             <button
               className='px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700'
               onClick={handleDownload}
@@ -80,7 +80,7 @@ const Certification = () => {
 
             <div className='relative'>
               <button
-                className='px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700'
+                className='px-4 py-2 hidden md:block bg-blue-600 text-white rounded hover:bg-blue-700'
                 onClick={() => setShowDropdown(prev => !prev)}
               >
                 Share

@@ -1,15 +1,15 @@
 import React, { useMemo } from "react";
 import { QRCodeCanvas } from "qrcode.react";
-import logoURL from "../../assets/koshishlogo.png";
-import signatureURL from "../../assets/signature.svg";
+import logoURL from "../../assets/koshish.svg";
+import signatureURL1 from "../../assets/signature.svg";
+import signatureURL2 from "../../assets/signature.svg";
 import sealURL from "../../assets/koshishStamp.jpeg";
 import certibg from "../../assets/certibg.svg";
 import recabn from "../../assets/recabn.png";
-import bladge from "../../assets/certificateblage.svg";
 import "./CertificateCardType1.css";
 
 const CertificateCardType1 = ({ certificate }) => {
-  const typeArr = ["participant", "mentor"];
+  const typeArr = ["participant", "Mentor"];
   const { _id, name, type, subject, joinTime, leaveTime, yog } = certificate;
 
   const verificationUrl = `${window.location.origin}/certify/${type}/${_id}`;
@@ -23,7 +23,7 @@ const CertificateCardType1 = ({ certificate }) => {
   return (
     <div className="certificate-container">
       <div className="certificate-bg">
-        <img src={logoURL} alt="certificate background" />
+        <img src={certibg} alt="certificate background" />
       </div>
 
       <div className="certificate-content">
@@ -34,21 +34,20 @@ const CertificateCardType1 = ({ certificate }) => {
 
         <div className="contributor">
           <div className="logo-section">
-            <img src={recabn} alt="Koshish Logo" className="logo" />
-            <p className="logo-text">
-              Rajkiya Engineering College Ambedkar Nagar
-            </p>
+            <img src={recabn} alt="rec Logo" className="logo" />
+            
+            <p className="logo-text">R.E.C. Ambedkar Nagar</p>
           </div>
           <div className="logo-section">
-            <img src={logoURL} alt="College Logo" className="logo" />
+            <img src={logoURL} alt="Koshish Logo" className="logo" />
             <p className="logo-text">Koshish Welfare</p>
           </div>
         </div>
 
         <div className="certificate-header">
           <h1 className="certificate-title">Certificate</h1>
-          <p className="certificate-subtitle">of {typeArr[type]}</p>
-          <p className="certificate-line">This is to certify that</p>
+          <p className="certificate-subtitle">of Appreciation</p>
+          <p className="certificate-line">This certificate is proudly presented to</p>
           <div className="certificate-name">
             <h2>{name}</h2>
           </div>
@@ -66,19 +65,27 @@ const CertificateCardType1 = ({ certificate }) => {
         </div>
 
         <div className="certificate-footer">
+          <div className="signature">
+            <img src={signatureURL1} alt="Signature" />
+            <div className="signature-line"></div>
+            <p className="signature-name">Mr. Avneesh Yadav</p>
+            <p className="signature-role">Coordinator Koshish</p>
+          </div>
           <div className="seal">
             <img src={sealURL} alt="Seal" />
             <h2>Koshish Welfare</h2>
           </div>
-          <div className="bladge">
-            <img src={bladge} alt="Certificate Badge" />
-          </div>
+          
+          
+            
           <div className="signature">
-            <img src={signatureURL} alt="Signature" />
+            <img src={signatureURL2} alt="Signature" />
             <div className="signature-line"></div>
-            <p className="signature-name">Avneesh Yadav</p>
-            <p className="signature-role">Coordinator, Koshish</p>
+            <p className="signature-name">Dr. G. Nalankilli </p>
+            <p className="signature-role">Director,<br />R.E.C. Ambedkar Nagar</p>
           </div>
+         
+          
         </div>
 
         <div className="certificate-issue-date">Date Issued: {issueDate}</div>

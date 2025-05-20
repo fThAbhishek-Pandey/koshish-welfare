@@ -32,7 +32,7 @@ const Achievement = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full md:w-[40%]">
+        <div className="w-full hidden md:block md:w-[40%]">
           <img
             src={AchivIll}
             alt="KOSHISH Achievements"

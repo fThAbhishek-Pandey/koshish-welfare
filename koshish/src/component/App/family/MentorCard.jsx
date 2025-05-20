@@ -7,7 +7,7 @@ const MentorCard = ({ item }) => {
   return (
     <div className="group cursor-pointer bg-green-100 border-2 border-green-300 shadow-lg rounded-3xl p-6 sm:p-8 text-center w-full max-w-xs transform transition-all duration-300 hover:shadow-2xl hover:-translate-y-3 hover:scale-105">
      <Helmet>
-        <title>{item.name} - Koshish</title>
+        <title>Family-Koshish</title>
         <meta name="description" content={`Learn more about ${item.name}, a mentor at Koshish.`} />
         <meta name="keywords" content={`Koshish, Mentors, ${item.name}`} />
         <meta name="author" content="Koshish Team" />

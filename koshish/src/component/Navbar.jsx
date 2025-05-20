@@ -94,7 +94,7 @@ const Navbar = () => {
           >
             About
           </NavLink>
-          <NavLink
+          {/* <NavLink
             to="/contact"
             className={({ isActive }) =>
               `transition hover:text-green-400 ${
@@ -103,14 +103,18 @@ const Navbar = () => {
             }
           >
             Contact
-          </NavLink>
+          </NavLink> */}
         </ul>
 
         {/* Desktop Button */}
         <div className="hidden md:flex">
-          <button className="px-5 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
+          <NavLink
+            to="/contact">
+              <button className="px-5 py-2 bg-green-500 text-white rounded hover:bg-green-600 transition">
             Join Us
           </button>
+            </NavLink>
+          
         </div>
 
         {/* Mobile Menu Toggle */}
